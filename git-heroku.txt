@@ -1,0 +1,8 @@
+heroku login
+
+git add .
+heroku git:remote -a emvr-proyecto-express
+git commit -m "Git de Arranque"
+git push heroku master
+
+Press any key to open up the browser to login or

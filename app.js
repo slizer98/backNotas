@@ -34,11 +34,13 @@ app.get('/', (req, res) => {
     res.send('Hola mundo');
 });
 
+app.use('/api', require('./routes/notas'));
 
 // Middleware para vue.js router modo history
 const history = require('connect-history-api-fallback');
 app.use(history());
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static('public'));
 
 // Puerto
 app.set('puerto', process.env.PORT || 3000)
